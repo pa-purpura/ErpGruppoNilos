@@ -1,4 +1,5 @@
 @extends('admin.layout')
+
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="py-3 breadcrumb-wrapper mb-4">
@@ -41,23 +42,20 @@
                         </div>
                         <div class="col-md-6">
                             <label class="form-label" for="sdi">SDI</label>
-                            <input type="text" id="sdi" class="form-control"
-                                placeholder="M5UXCR1">
+                            <input type="text" id="sdi" class="form-control" placeholder="M5UXCR1">
                         </div>
                         <div class="col-md-6">
                             <label class="form-label" for="piva">P.IVA</label>
-                            <input type="text" id="piva" class="form-control"
-                                placeholder="P.IVA">
+                            <input type="text" id="piva" class="form-control" placeholder="P.IVA">
                         </div>
                         <div class="col-md-6">
                             <label class="form-label" for="cf">Codice Fiscale</label>
-                            <input type="text" id="cf" class="form-control"
-                                placeholder="12345678910111213141516">
+                            <input type="text" id="cf" class="form-control" placeholder="12345678910111213141516">
                         </div>
                         <div class="col-md-6">
                             <label class="form-label" for="phone">Telefono Cellulare</label>
-                            <input type="text" id="phone" class="form-control phone-mask"
-                                placeholder="658 799 8941" aria-label="658 799 8941">
+                            <input type="text" id="phone" class="form-control phone-mask" placeholder="658 799 8941"
+                                aria-label="658 799 8941">
                         </div>
                     </div>
                     <div class="pt-4">
