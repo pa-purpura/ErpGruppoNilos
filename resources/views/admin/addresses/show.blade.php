@@ -4,7 +4,7 @@
     <h4 class="py-3 breadcrumb-wrapper mb-4">
         <span class="text-muted fw-light">Dipendenti </span>
     </h4>
-    <div class="nav-align-left">
+    {{-- <div class="nav-align-left">
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
                 <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab"
@@ -112,6 +112,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div> --}}
+    <h5>show address</h5>
 </div>
 @endsection

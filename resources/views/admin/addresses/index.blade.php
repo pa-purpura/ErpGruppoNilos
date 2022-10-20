@@ -2,16 +2,16 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="py-3 breadcrumb-wrapper mb-4"><span class="text-muted fw-light">Anagrafica /</span> Collaboratori</h4>
+        <h4 class="py-3 breadcrumb-wrapper mb-4"><span class="text-muted fw-light">Anagrafica /</span> Indirizzi</h4>
         {{-- 'dipendendi' deve diventare variabile  --}}
 
         <!-- DataTable with Buttons -->
-        <div class="card">
+        {{-- <div class="card">
             <div class="card-datatable table-responsive pt-0">
                 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
                     <div class="card-header flex-column flex-md-row">
                         <div class="head-label text-center">
-                            <h5 class="card-title mb-0">Lista Collaboratori</h5> {{-- 'dipendendi' deve diventare variabile  --}}
+                            <h5 class="card-title mb-0">Lista Collaboratori</h5> 'dipendendi' deve diventare variabile 
                         </div>
                         <div class="dt-action-buttons text-end pt-3 pt-md-0">
                             <div class="dt-buttons">
@@ -130,6 +130,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
+        <h1>index address</h1>
     </div>
 @endsection
