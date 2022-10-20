@@ -2,7 +2,8 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="py-3 breadcrumb-wrapper mb-4"><span class="text-muted fw-light">Anagrafica /</span> Dipendenti</h4> {{-- 'dipendendi' deve diventare variabile  --}}
+        <h4 class="py-3 breadcrumb-wrapper mb-4"><span class="text-muted fw-light">Anagrafica /</span> Dipendenti</h4>
+        {{-- 'dipendendi' deve diventare variabile  --}}
 
         <!-- DataTable with Buttons -->
         <div class="card">
@@ -14,10 +15,12 @@
                         </div>
                         <div class="dt-action-buttons text-end pt-3 pt-md-0">
                             <div class="dt-buttons">
-                                <button
-                                    class="dt-button create-new btn btn-primary" tabindex="0"
-                                    aria-controls="DataTables_Table_0" type="button"><span><i
-                                            class="bx bx-plus me-sm-2"></i> <span class="d-none d-sm-inline-block">Aggiungi nuovo</span></span></button> </div>
+                                <a href="{{ route('admin.users.create') }}">
+                                    <button class="dt-button create-new btn btn-primary" tabindex="0"
+                                        aria-controls="DataTables_Table_0" type="button"><span><i
+                                                class="bx bx-plus me-sm-2"></i> <span class="d-none d-sm-inline-block">
+                                                Aggiungi nuovo</span></span></button></a>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -34,9 +37,9 @@
                                     </select> inserimenti</label></div>
                         </div>
                         <div class="col-sm-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-                            <div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Cerca:<input
-                                        type="search" class="form-control" placeholder=""
-                                        aria-controls="DataTables_Table_0"></label></div>
+                            <div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Cerca:<input type="search"
+                                        class="form-control" placeholder="" aria-controls="DataTables_Table_0"></label>
+                            </div>
                         </div>
                     </div>
                     <table class="datatables-basic table table-bordered dataTable no-footer dtr-column"
@@ -46,8 +49,7 @@
                                 <th class="control sorting_disabled dtr-hidden" rowspan="1" colspan="1"
                                     style="width: 46px; display: none;" aria-label=""></th>
                                 <th class="sorting_disabled dt-checkboxes-cell dt-checkboxes-select-all" rowspan="1"
-                                    colspan="1" style="width: 51px;" data-col="1" aria-label=""><input type="checkbox"
-                                        class="form-check-input"></th>
+                                    colspan="1" style="width: 51px;" data-col="1" aria-label="">ID</th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                                     colspan="1" style="width: 130px;"
                                     aria-label="Name: activate to sort column ascending">Name</th>
@@ -69,7 +71,22 @@
                         </thead>
                         <tbody>
                             <tr class="odd">
-                                <td valign="top" colspan="7" class="dataTables_empty">Loading...</td>
+                                <td valign="top" class="dataTables_empty">01</td>
+                                <td valign="top" class="dataTables_empty">Ciccio</td>
+                                <td valign="top" class="dataTables_empty">ciccio@libero.it</td>
+                                <td valign="top" class="dataTables_empty">17/05/1986</td>
+                                <td valign="top" class="dataTables_empty">1.600 €</td>
+                                <td valign="top" class="dataTables_empty"> -- </td>
+                                <td valign="top" class="dataTables_empty">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <a href=""><button type="button"
+                                                class="btn btn-label-primary">Dettagli</button></a>
+                                        <a href=""><button type="button"
+                                                class="btn btn-label-secondary mx-1">Modifica</button></a>
+                                        <button type="button" class="btn btn-label-danger">Elimina</button>
+
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -96,5 +113,4 @@
             </div>
         </div>
     </div>
-
 @endsection
