@@ -79,6 +79,11 @@
                         <div data-i18n="Dipendenti">Dipendenti</div>
                     </a>
                 </li>
+                <li class="menu-item">
+                    <a href="{{ route('admin.providers.index') }}" class="menu-link">
+                        <div data-i18n="Fornitori">Fornitori</div>
+                    </a>
+                </li>
             </ul>
         </li>
 
