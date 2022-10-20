@@ -23,6 +23,11 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function bank()
+    {
+        return $this->hasOne(Bank::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
