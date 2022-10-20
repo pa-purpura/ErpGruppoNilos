@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CollaboratorController;
+use App\Http\Controllers\ProviderController;
+use App\Http\Controllers\CustomerController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +26,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::view('home', 'admin.dashboard.index')->name('dashboard');
     Route::resource('users', UserController::class);
     Route::resource('collaborators', CollaboratorController::class);
+    Route::resource('providers', ProviderController::class);
+    Route::resource('customers', CustomerController::class);
+
 });
 
 Route::get('/dashboard', function () {
