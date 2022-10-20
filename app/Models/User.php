@@ -23,11 +23,6 @@ class User extends Authenticatable
         'password',
     ];
 
-    public function bank()
-    {
-        return $this->hasOne(Bank::class);
-    }
-
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -49,5 +44,22 @@ class User extends Authenticatable
 
     public function address() {
         return $this->hasOne(Address::class);
+    }
+
+    public function bank()
+    {
+        return $this->hasOne(Bank::class);
+    }
+
+
+    public function parent_user()
+    {
+        return $this->belongsToMany(User::class, 'user_user', 'parent_user_id', 'child_user_id')->withPivot('child_type', 'parent_type');
+    }
+
+    public function child_user()
+    {
+        return $this->belongsToMany(User::class, 'user_user', 'child_user_id', 'parent_user_id')->withPivot('child_type', 'parent_type');
+
     }
 }

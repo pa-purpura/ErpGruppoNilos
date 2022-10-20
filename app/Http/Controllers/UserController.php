@@ -15,6 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
+        $hobbies = User::find(1)->parent_user;
+        dd($hobbies);
         return view('admin.users.index');
     }
 
