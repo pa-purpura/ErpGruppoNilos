@@ -75,6 +75,11 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
+                    <a href="{{ route('admin.collaborators.index') }}" class="menu-link">
+                        <div data-i18n="Collaboratori">Collaboratori</div>
+                    </a>
+                </li>
+                <li class="menu-item">
                     <a href="{{ route('admin.users.index') }}" class="menu-link">
                         <div data-i18n="Dipendenti">Dipendenti</div>
                     </a>
