@@ -26,13 +26,23 @@ Route::prefix('admin')->name('admin.')->group(function () {
     //     return view('admin.layout');
     // });
     Route::view('home', 'admin.dashboard.index')->name('dashboard');
-    Route::resource('users', UserController::class);
-    Route::resource('collaborators', CollaboratorController::class);
-    Route::resource('providers', ProviderController::class);
-    Route::resource('customers', CustomerController::class);
+    // Route::resource('users', UserController::class);
+    Route::get('users/{type}', [UserController::class, 'index'])->name('users.index');
+    Route::get('users/create', [UserController::class, 'create'])->name('users.create');
     Route::resource('addresses', AddressController::class);
 
 });
+
+// GET|HEAD        admin/users ....................................................................... admin.users.index › UserController@index
+// POST            admin/users ....................................................................... admin.users.store › UserController@store
+// GET|HEAD        admin/users/create ................................................................ admin.users.create › UserController@create
+// GET|HEAD        admin/users/{type} ................................................................ admin.users.index › UserController@index
+// GET|HEAD        admin/users/{user} ................................................................ admin.users.show › UserController@show
+// PUT|PATCH       admin/users/{user} ................................................................ admin.users.update › UserController@update
+// DELETE          admin/users/{user} ................................................................ admin.users.destroy › UserController@destroy
+// GET|HEAD        admin/users/{user}/edit ........................................................... admin.users.edit › UserController@edit
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -74,26 +74,26 @@
                 <div data-i18n="Anagrafiche">Anagrafiche</div>
             </a>
             <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="{{ route('admin.customers.index') }}" class="menu-link">
+                {{-- <li class="menu-item">
+                    <a href="{{ route('admin.users.index' ,  $type = 'Dipendente') }}" class="menu-link">
                         <div data-i18n="Clienti">Clienti</div>
                     </a>
-                </li>
-                <li class="menu-item">
+                </li> --}}
+                {{-- <li class="menu-item">
                     <a href="{{ route('admin.collaborators.index') }}" class="menu-link">
                         <div data-i18n="Collaboratori">Collaboratori</div>
                     </a>
-                </li>
+                </li> --}}
                 <li class="menu-item">
-                    <a href="{{ route('admin.users.index') }}" class="menu-link">
+                    <a href="{{ route('admin.users.index',  $type = 'Dipendente') }}" class="menu-link">
                         <div data-i18n="Dipendenti">Dipendenti</div>
                     </a>
                 </li>
-                <li class="menu-item">
+                {{-- <li class="menu-item">
                     <a href="{{ route('admin.providers.index') }}" class="menu-link">
                         <div data-i18n="Fornitori">Fornitori</div>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </li>
         <!-- Apps & Pages -->
