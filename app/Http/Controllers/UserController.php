@@ -13,11 +13,16 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($type)
     {
-        $hobbies = User::find(1)->parent_user;
-        dd($hobbies);
-        return view('admin.users.index');
+        $users = User::where('type', $type)->get();
+        
+        $data = [
+            'users' => $users,
+            'type' => $type,
+        ];
+        // dd($user);
+        return view('admin.users.index', $data);
     }
 
     /**
@@ -27,6 +32,7 @@ class UserController extends Controller
      */
     public function create()
     {
+        dd('qui');
         return view('admin.users.create');
     }
 

@@ -2,24 +2,45 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="py-3 breadcrumb-wrapper mb-4"><span class="text-muted fw-light">Anagrafica /</span> Dipendenti</h4>
-        {{-- 'dipendendi' deve diventare variabile  --}}
-
+        <h4 class="py-3 breadcrumb-wrapper mb-4"><span class="text-muted fw-light">Anagrafica /</span></h4>
         <!-- DataTable with Buttons -->
         <div class="card">
             <div class="card-datatable table-responsive pt-0">
                 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
                     <div class="card-header flex-column flex-md-row">
                         <div class="head-label text-center">
-                            <h5 class="card-title mb-0">Lista dipendenti</h5> {{-- 'dipendendi' deve diventare variabile  --}}
+                            {{-- @dd($type) --}}
+                        @switch($type)
+                            @case('Dipendente')
+                                <h5 class="card-title mb-0">Lista dipendenti</h5>
+                            @break 
+                            @case('Collaboratore')
+                                <h5 class="card-title mb-0">Lista Collaboratori</h5>
+                            @break
+                            @case('Contatto')
+                                <h5 class="card-title mb-0">Lista Contatti</h5>
+                            @break
+                            @case('Cliente')
+                                <h5 class="card-title mb-0">Lista Clienti</h5>
+                            @break
+                            @case('Fornitore')
+                                <h5 class="card-title mb-0">Lista Fornitori</h5>
+                            @break
+                            @case('Azienda')
+                                <h5 class="card-title mb-0">Lista Aziende</h5>
+                            @break
+                            @default
+                            <span class="status">Lista</span>
+                        @endswitch
                         </div>
                         <div class="dt-action-buttons text-end pt-3 pt-md-0">
+                            
                             <div class="dt-buttons">
                                 <a href="{{ route('admin.users.create') }}">
                                     <button class="dt-button create-new btn btn-primary" tabindex="0"
                                         aria-controls="DataTables_Table_0" type="button"><span><i
                                                 class="bx bx-plus me-sm-2"></i> <span class="d-none d-sm-inline-block">
-                                                Aggiungi nuovo</span></span></button></a>
+                                                Aggiungi nukkkovo</span></span></button></a>
                             </div>
                         </div>
                     </div>
